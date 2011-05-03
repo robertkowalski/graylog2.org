@@ -1,1 +1,67 @@
-<h1>Product</h1>
+<div style="float: right; padding-left: 25px; width: 280px;">
+  <h2>Use cases</h2>
+  <div class="product-use-case">
+    <h3>Monitoring</h3>
+    Get alerts when the amount of new log messages reaches a defined maximum. Always have an
+    overview of the log amount trends in good looking graphs just one click away. This is also
+    possible on a per-stream level.
+  </div>
+  
+  <div class="product-use-case">
+    <h3>API consumer measuring</h3>
+    Create streams for every API consumer and quickly filter errors of certain consumers. Give
+    these developers access to their own streams only and let them debug theirselves. Easily find
+    out which consumers do the most requests on a certain resource.
+  </div>
+
+  <div class="product-use-case">
+    <h3>Activity log</h3>
+    Send a log message for every activity a user performs in your application. Use the filter and
+    reporting abilities of Graylog2 to get an insight of what your users are doing and how they
+    use your application.
+  </div>
+</div>
+
+<div style="width: 580px;">
+  <h1>Product</h1>
+  <p>
+    Graylog2 is an open source log management solution that stores your logs in <a href="http://www.mongodb.org/" target="_blank">MongoDB</a>. It consists of a server
+    written in Java that accepts your syslog messages via TCP, UDP or AMQP and stores it in the database. The second part is a web interface that allows you to manage
+    the log messages from your web browser. Take a look at the screenshots or the latest release info page to get a feeling of what you can do with Graylog2.
+  </p>
+
+  <img src="/images/screenshot.png" id="product-screenshot" />
+
+  <h2>The web interface</h2>
+  <p>
+    All data sent to Graylog2 will appear in the web interface. Use the web interface to search and filter your data. A core part of the web interface are
+    streams: They basically are saved searches that allow you to quickly access an overview that is already pre-filtered to match for example specific parts
+    of your application. You can also run monitoring and alerting on single streams or directly forward all messages that are matched into a stream to other
+    endpoints.
+  </p>
+
+  <h2>How do I send my log data?</h2>
+  <p>
+    The Graylog2 server accepts standard syslog via TCP/UDP and <a href="/product/gelf">GELF</a> via UDP. You can also send in both formats via
+    <a href="http://www.amqp.org/" target="_blank">AMQP</a> (<a href="https://github.com/Graylog2/graylog2-server/wiki/AMQP" target="_blank">AMQP Docs</a>).
+    You can configure your syslog daemons to send their data to Graylog2 or log directly from within your applications.
+  </p>
+
+  <h2>Graylog Extended Log Format</h2>
+  <p>
+    The Graylog Extended Log Format (GELF) avoids the shortcomings of classic syslog. It is perfect for sending log messages from within your applications
+    in an easy and structured way. There are libraries and log appenders for
+    <a href="https://github.com/Graylog2/gelf-rb/wiki" target="_blank">Ruby</a>, 
+    <a href="https://github.com/Graylog2/gelf-php/wiki" target="_blank">PHP</a>, 
+    <a href="http://pypi.python.org/pypi/graypy" target="_blank">Python</a>, 
+    Java/Log4j (<a href="https://github.com/pstehlik/gelf4j" target="_blank">gelf4j</a>,
+                <a href="https://github.com/t0xa/gelfj" target="_blank">gelfj</a>),
+    <a href="https://github.com/wr0ngway/log4r-gelf" target="_blank">Log4r</a>,
+    <a href="https://github.com/jjchiw/gelf4net" target="_blank">.NET/log4net</a>
+    and <a href="https://github.com/Graylog2/graylog2_exceptions/wiki" target="_blank">Rack</a>.
+    Read more about it here: <a href="/product/gelf">GELF</a>.
+  </p>
+
+<!-- live demo -->
+
+</div>

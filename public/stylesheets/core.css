@@ -11,7 +11,12 @@ a {
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 25px;
+  border-left: 10px solid #c03;
+  padding: 5px;
+  padding-bottom: 0px;
+  color: #000;
+  font-family: 'Raleway', arial, serif;
 }
 
 h2 {
@@ -101,4 +106,18 @@ p {
 #production-deployments li {
   float: left;
   margin-right: 10px;
+}
+
+.product-use-case {
+  margin-top: 10px;
+  line-height: 14px;
+}
+
+.product-use-case h3 {
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+#product-screenshot {
+  margin-bottom: 20px;
 }
