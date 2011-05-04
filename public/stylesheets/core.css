@@ -69,6 +69,10 @@ ul {
   color: #fff;
 }
 
+#top-title a:hover {
+  text-decoration: none;
+}
+
 #top-subtitle {
   font-size: 10px;
 }
