@@ -1,26 +1,4 @@
-<div style="float: right; padding-left: 25px; width: 280px;">
-  <h2>Use cases</h2>
-  <div class="product-use-case">
-    <h3>Monitoring</h3>
-    Get alerts when the amount of new log messages reaches a defined maximum. Always have an
-    overview of the log amount trends in good looking graphs just one click away. This is also
-    possible on a per-stream level.
-  </div>
-  
-  <div class="product-use-case">
-    <h3>API consumer measuring</h3>
-    Create streams for every API consumer and quickly filter errors of certain consumers. Give
-    these developers access to their own streams only and let them debug theirselves. Easily find
-    out which consumers do the most requests on a certain resource.
-  </div>
-
-  <div class="product-use-case">
-    <h3>Activity log</h3>
-    Send a log message for every activity a user performs in your application. Use the filter and
-    reporting abilities of Graylog2 to get an insight of what your users are doing and how they
-    use your application.
-  </div>
-</div>
+<%= erb :_sidebar_product %>
 
 <div style="width: 580px;">
   <h1>Product</h1>
@@ -65,6 +43,9 @@
     You can configure your syslog daemons to send their data to Graylog2 or log directly from within your applications.
   </p>
 
+  <img src="/images/shipyourlogs.png" />
+
+  <br /><br />
   <h2>Graylog Extended Log Format</h2>
   <p>
     The Graylog Extended Log Format (GELF) avoids the shortcomings of classic syslog. It is perfect for sending log messages from within your applications
@@ -79,7 +60,5 @@
     and <a href="https://github.com/Graylog2/graylog2_exceptions/wiki" target="_blank">Rack</a>.
     Read more about it here: <a href="/product/gelf">GELF</a>.
   </p>
-
-<!-- live demo -->
-
+    
 </div>

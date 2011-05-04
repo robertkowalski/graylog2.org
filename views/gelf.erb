@@ -1,0 +1,64 @@
+<%= erb :_sidebar_product %>
+
+<div style="width: 580px;">
+  <h1>Graylog Extended Log Format</h1>
+  <p style="margin-bottom: 5px;">The Graylog Extended Log Format (GELF) avoids the shortcomings of classic plain syslog:</p>
+
+  <ul> 
+    <li>Limited to length of 1024 byte - Not much space for payloads like backtraces</li> 
+    <li>Unstructured. You can only build a long message string and define priority, severity etc.</li> 
+  </ul> 
+ 
+  <p>
+    Syslog is okay for logging system messages of you servers. Use it for that. GELF instead is great
+    for logging from within applications. It is a good practice to send GELF messages directly from
+    your existing logging classes so it is very easy to integrate into existing applications. You could
+    use GELF to send every exception as a log message to your Graylog2 server. You don't have to care
+    about timeouts, connection problems or anything that might break your application from within your
+    logging class because GELF is sent via UDP. The disadvantage of this fire and forget principle is 
+    of course that no one garantuees that your GELF message will ever arrive. I'd say that important
+    messages will just occur again. TCP support for those who like it is coming though.
+  </p>
+
+  <img src="/images/gelf_message.png" />
+
+  <br /><br />
+  <h2>Libraries</h2> 
+  <p style="margin-bottom: 5px;">
+    There is an official <a href="http://github.com/Graylog2/gelf-php" target="_blank">PHP</a> and 
+    <a href="http://github.com/Graylog2/gelf-rb" target="_blank">Ruby</a>  library to send GELF messages.
+    There are also libraries and appenders written by users:
+  </p>
+
+  <ul> 
+    <li><a href="https://github.com/wr0ngway/log4r-gelf" target="_blank">log4r-gelf</a> (Log4r)</li> 
+    <li><a href="https://github.com/pstehlik/gelf4j" target="_blank">gelf4j</a> (Java &amp; Log4j)</li> 
+    <li><a href="https://github.com/t0xa/gelfj" target="_blank">gelfj</a> (Java &amp; Log4j)</li> 
+    <li><a href="http://pypi.python.org/pypi/graypy" target="_blank">graypy</a> (Python)</li> 
+    <li><a href="https://github.com/jjchiw/gelf4net" target="_blank">gelf4net</a> (.NET log4net)</li> 
+  </ul> 
+
+  <br />
+  <h2>Structure</h2> 
+  <p>
+    The GELF specs are in the wiki: <a href="https://github.com/Graylog2/graylog2-docs/wiki/GELF" target="_blank">https://github.com/Graylog2/graylog2-docs/wiki/GELF</a> 
+  </p>
+
+  <h2>Chunked GELF</h2>
+  <p>
+    UDP datagrams are limited to a size of 8192 byte. A lot of GZIP'd information is fitting in there but you sometimes
+    might just have more information to send. This is why Graylog2 supports chunked GELF. You can define chunks of
+    messages by prepending a byte header to a GELF message including a GELF ID for backwards compatibilty, a message ID
+    and sequence count/number to reassemble the message later. This feature is supported by my gelf-php and gelf-rb
+    libraries and will be documented soon. The library will detect if the message is too long and will perform the
+    chunking itself.
+    More information in the wiki: <a href="https://github.com/Graylog2/graylog2-docs/wiki/GELF" target="_blank">https://github.com/Graylog2/graylog2-docs/wiki/GELF</a> 
+  </p>
+ 
+  <h1>Rack/Rails exception tracking</h1> 
+  <p>
+    This <a href="https://rubygems.org/gems/graylog2_exceptions" target="_blank">Rack middleware gem</a> makes it very easy to log
+    all your Rack/Rails exceptions to a Graylog2 server. Installation and configuration guide is in <a href="https://github.com/Graylog2/graylog2_exceptions/wiki" target="_blank">it's wiki</a> 
+  </p>
+
+</div>

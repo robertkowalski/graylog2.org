@@ -10,6 +10,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 h1 {
   font-size: 25px;
   border-left: 10px solid #c03;
@@ -34,6 +38,11 @@ p {
   line-height: 15px;
 }
 
+ul {
+  list-style-type: square;
+  margin-left: 25px;
+}
+
 #mastertop {
   width: 100%;
   background-color: #000;
@@ -56,6 +65,10 @@ p {
   font-weight: 400;
 }
 
+#top-title a {
+  color: #fff;
+}
+
 #top-subtitle {
   font-size: 10px;
 }
@@ -63,6 +76,7 @@ p {
 #main-menu {
   margin-top: 40px;
   float: right;
+  list-style-type: none;
 }
 
 #main-menu li {
@@ -76,6 +90,7 @@ p {
 
 #main-menu a:hover {
   color: #c03;
+  text-decoration: none;
 }
 
 .active-main-menu-link {
@@ -87,6 +102,7 @@ p {
   margin: 0px auto;
   width: 900px;
   margin-top: 20px;
+  padding-bottom: 20px;
 }
 
 .teaser {
@@ -108,12 +124,13 @@ p {
   margin-right: 10px;
 }
 
-.product-use-case {
+.sidebar-area {
   margin-top: 10px;
+  margin-bottom: 15px;
   line-height: 14px;
 }
 
-.product-use-case h3 {
+.sidebar-area h3 {
   font-size: 13px;
   margin-bottom: 3px;
 }
@@ -129,4 +146,20 @@ p {
 
 .product-screenshot {
   margin-right: 3px;
+}
+
+.small-teaser {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: #ffeaf0;
+  padding: 5px;
+}
+
+#twitter-button-sidebar {
+  padding-left: 184px;
+}
+
+#pledgie-sidebar {
+  margin-bottom: 5px;
+  padding-left: 130px;
 }
