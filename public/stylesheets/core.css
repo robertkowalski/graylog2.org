@@ -118,6 +118,15 @@ p {
   margin-bottom: 3px;
 }
 
-#product-screenshot {
+#product-screenshots {
   margin-bottom: 20px;
+}
+
+.product-screenshots-row {
+  margin-left: 5px;
+  margin-bottom: 4px;
+}
+
+.product-screenshot {
+  margin-right: 3px;
 }
