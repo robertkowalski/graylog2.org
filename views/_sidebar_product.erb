@@ -21,10 +21,12 @@
     use your application.
   </div>
 
+  <% unless request.path_info == "/product/gelf" %>
   <div class="small-teaser">
     Log from within your applications in a structured way using the Graylog Extended Log Format (GELF).
     <a href="/product/gelf">Learn more</a>...
   </div>
+  <% end %>
 
   <h2>Performance</h2>
   <div class="sidebar-area">
