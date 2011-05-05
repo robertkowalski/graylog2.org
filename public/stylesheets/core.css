@@ -122,6 +122,8 @@ ul {
   position: relative;
   top: -10px;
   height: 50px;
+  list-style-type: none;
+  margin-left: 0px;
 }
 
 #production-deployments li {
