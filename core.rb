@@ -16,3 +16,7 @@ end
 get '/product/gelf' do
   erb :gelf
 end
+
+get '/support' do
+  erb :support
+end
