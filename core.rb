@@ -20,3 +20,7 @@ end
 get '/support' do
   erb :support
 end
+
+
+# important legacy URLs
+get('/about/gelf') { redirect to('/product/gelf') }
