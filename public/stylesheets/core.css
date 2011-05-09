@@ -110,6 +110,16 @@ ul {
   padding-bottom: 20px;
 }
 
+#left {
+  width: 580px;
+}
+
+#right {
+  float: right;
+  padding-left: 25px;
+  width: 280px;
+}
+
 .teaser {
   font-size: 60px;
   background-color: #c03;
