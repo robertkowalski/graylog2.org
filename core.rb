@@ -24,3 +24,7 @@ end
 get '/download' do
   erb :download
 end
+
+get '/contact' do
+  erb :contact
+end
