@@ -1,4 +1,4 @@
-<%= erb :_sidebar_product %>
+<%= erb :_sidebar_about %>
 
 <div style="width: 580px;">
   <h1>Product</h1>
@@ -8,21 +8,21 @@
     the log messages from your web browser. Take a look at the screenshots or the latest release info page to get a feeling of what you can do with Graylog2.
   </p>
 
-  <div id="product-screenshots">
-    <div class="product-screenshots-row">
+  <div id="about-screenshots">
+    <div class="about-screenshots-row">
       <% 3.times do |i| %>
         <% i = i+=1 %>
         <a href="/images/screenshots/0<%= i %>.png" rel="lightbox[screens]">
-          <img src="/images/screenshots/0<%= i %>_t.png" class="product-screenshot" />
+          <img src="/images/screenshots/0<%= i %>_t.png" class="about-screenshot" />
         </a>
       <% end %>
     </div>
     
-    <div class="product-screenshots-row">
+    <div class="about-screenshots-row">
       <% 3.times do |i| %>
         <% i = i+=4 %>
         <a href="/images/screenshots/0<%= i %>.png" rel="lightbox[screens]">
-          <img src="/images/screenshots/0<%= i %>_t.png" class="product-screenshot" />
+          <img src="/images/screenshots/0<%= i %>_t.png" class="about-screenshot" />
         </a>
       <% end %>
     </div>
@@ -38,7 +38,7 @@
 
   <h2>How do I send my log data?</h2>
   <p>
-    The Graylog2 server accepts standard syslog via TCP/UDP and <a href="/product/gelf">GELF</a> via UDP. You can also send in both formats via
+    The Graylog2 server accepts standard syslog via TCP/UDP and <a href="/about/gelf">GELF</a> via UDP. You can also send in both formats via
     <a href="http://www.amqp.org/" rel="nofollow" target="_blank">AMQP</a> (<a href="https://github.com/Graylog2/graylog2-server/wiki/AMQP" target="_blank">AMQP Docs</a>).
     You can configure your syslog daemons to send their data to Graylog2 or log directly from within your applications.
   </p>
@@ -58,7 +58,7 @@
     <a href="https://github.com/wr0ngway/log4r-gelf" target="_blank">Log4r</a>,
     <a href="https://github.com/jjchiw/gelf4net" target="_blank">.NET/log4net</a>
     and <a href="https://github.com/Graylog2/graylog2_exceptions/wiki" target="_blank">Rack</a>.
-    Read more about it here: <a href="/product/gelf">GELF</a>.
+    Read more about it here: <a href="/about/gelf">GELF</a>.
   </p>
     
 </div>

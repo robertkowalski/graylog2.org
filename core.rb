@@ -9,11 +9,11 @@ require './helpers.rb'
   end
 end
 
-get '/product' do
-  erb :product
+get '/about' do
+  erb :about
 end
 
-get '/product/gelf' do
+get '/about/gelf' do
   erb :gelf
 end
 
@@ -24,7 +24,3 @@ end
 get '/download' do
   erb :download
 end
-
-
-# important legacy URLs
-get('/about/gelf') { redirect to('/product/gelf') }

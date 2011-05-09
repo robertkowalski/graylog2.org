@@ -2,7 +2,7 @@ helpers do
 
   def menu_link(where)
     mapping = {
-      "/product/gelf" => "product"
+      "/about/gelf" => "about"
     }
 
     current = request.path_info
