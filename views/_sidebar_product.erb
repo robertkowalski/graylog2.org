@@ -6,7 +6,7 @@
     overview of the log amount trends in good looking graphs just one click away. This is also
     possible on a per-stream level.
   </div>
-  
+
   <div class="sidebar-area">
     <h3>API consumer measuring</h3>
     Create streams for every API consumer and quickly filter errors of certain consumers. Give
@@ -21,11 +21,11 @@
     use your application.
   </div>
 
-  <% unless request.path_info == "/product/gelf" %>
-  <div class="small-teaser">
-    Log from within your applications in a structured way using the Graylog Extended Log Format (GELF).
-    <a href="/product/gelf">Learn more</a>...
-  </div>
+  <% unless request.url == url('/product/gelf') %>
+    <div class="small-teaser">
+      Log from within your applications in a structured way using the Graylog Extended Log Format (GELF).
+      <a href="<%= url('/product/gelf') %>">Learn more</a>...
+    </div>
   <% end %>
 
   <h2>Performance</h2>
