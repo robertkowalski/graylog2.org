@@ -3,8 +3,6 @@ require 'uri'
 
 require './helpers.rb'
 
-#test 
-puts "ohai"
 
 [ '/', '/home' ].each do |route|
   get route do
