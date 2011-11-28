@@ -3,6 +3,9 @@ require 'uri'
 
 require './helpers.rb'
 
+#test 
+puts "ohai"
+
 [ '/', '/home' ].each do |route|
   get route do
     @title = "Free open source self-hosted log management and exception tracking"
