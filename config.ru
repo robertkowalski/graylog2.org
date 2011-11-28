@@ -4,7 +4,7 @@ require 'bundler'
 Bundler.require
 
 if ENV['REMOTE_SYSLOG_URI']
-  require 'lib/remote_syslog'
+  require 'remote_syslog'
 
   uri = URI.parse(ENV['REMOTE_SYSLOG_URI'])
   logger = RemoteSyslog:: UdpSender.new(uri.host, uri.port, 
