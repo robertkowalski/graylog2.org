@@ -5,6 +5,7 @@ require './helpers.rb'
 
 [ '/', '/home' ].each do |route|
   get route do
+puts "test"
     @title = "Free open source self-hosted log management and exception tracking"
     erb :home
   end
