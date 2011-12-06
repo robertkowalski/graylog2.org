@@ -33,6 +33,7 @@ end
 end
 
 get '/about' do
+puts "TEST"
   @title = "About"
   erb :about
 end
