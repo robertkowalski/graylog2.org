@@ -56,3 +56,8 @@ get '/contact' do
   @title = "Contact"
   erb :contact
 end
+
+get '/ohai/0.9.6' do
+  authorize!
+  erb :ohai_096, :layout => false
+end

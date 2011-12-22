@@ -1,0 +1,161 @@
+body {
+  margin-top: 20px;
+  background-image: url(/images/ohai_bg.png);
+  background-repeat: repeat-x;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 48px;
+  color: #fff;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+a {
+  color: #ff3838;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#container {
+  width: 900px;
+  margin: 0px auto;
+}
+
+.teaser-two {
+  font-family: 'Armata', sans-serif;
+  margin-top: 10px;
+  margin-left: 130px;
+  color: #fff;
+}
+
+#lol-enterprise {
+  margin: 0px auto;
+  margin-top: 25px;
+  width: 849px;
+}
+
+#lol-enterprise-text {
+  margin-top: 4px;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 14px;
+  color: #fff;
+  line-height: 17px;
+}
+
+#info {
+  margin-top: 35px;
+  padding-right: 20px;
+  width: 280px;
+  float: left;
+}
+
+.info-text {
+  margin-top: 20px;
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  text-align: justify;
+  line-height: 16px;
+}
+
+#download {
+  background-color: #ff3838;
+  width: 150px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0px auto;
+  margin-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+}
+
+#download a {
+  color: #fff;
+}
+
+#download a:hover {
+  text-decoration: none;
+}
+
+#donate {
+  width: 150px;
+  margin: 0px auto;
+  margin-top: 25px;
+}
+
+.ad-separator {
+  width: 200px;
+  font-family: Arial;
+  font-size: 10px;
+  margin: 0px auto;
+  margin-top: 30px;
+  margin-bottom: 2px;
+  border-bottom: 1px dotted #000;
+  padding-bottom: 2px;
+}
+
+#adsense {
+  width: 200px;
+  margin: 0px auto;
+}
+
+#whats-new {
+  margin-top: 35px;
+  width: 600px;
+  float: right;
+}
+
+#whats-new-head {
+  width: 100%;
+  text-align: right;
+  font-family: 'Lato', sans-serif;
+}
+
+.new-feature {
+  float: right;
+  width: 600px;
+  margin-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ddd;
+}
+
+.new-feature-head {
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+.new-feature-head h3 {
+  font-family: 'Lato', sans-serif;
+}
+
+.new-feature-text {
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  text-align: justify;
+  line-height: 16px;
+}
+
+#footer {
+  border-top: 1px solid #ddd;
+  margin-top: 25px;
+  padding-top: 15px;
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  line-height: 16px;
+}

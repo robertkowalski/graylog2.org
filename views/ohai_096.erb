@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+  <head> 
+  <title>Graylog2 v0.9.6 is here!</title> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta property="fb:admins" content="100001858438029" /> 
+  <meta property="og:title" content="Graylog2 - Free open source self-hosted log management and exception tracking"/> 
+  <meta property="og:image" content="http://www.graylog2.org/images/fb.jpg"/> 
+  <meta property="og:type" content="non_profit"/> 
+  <meta property="og:url" content="http://www.graylog2.org/"/> 
+  <meta property="og:site_name" content="Graylog2.org"/> 
+  <meta property="og:description" content="Graylog2 is an open source log management tool."/> 
+  <link href="/stylesheets/reset.css" media="screen" rel="stylesheet" type="text/css" /> 
+  <link href="/stylesheets/ohai_096.css" media="screen" rel="stylesheet" type="text/css" /> 
+
+  <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Armata' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+</head> 
+<body> 
+
+<div id="container">
+
+  <div id="top-teaser">
+    <h1>Ohai. The brand new Graylog2 is here!</h1>
+    <h3 class="teaser-two">Welcome v0.9.6! Taking open source log management to a new level.</h3>
+  </div>
+
+  <div id="lol-enterprise">
+    <img style="border:1px solid #000;" src="/images/ohai_lolenterprise.jpg" />
+    <div id="lol-enterprise-text">
+      There is no future for Graylog2 without being more enterprise they said. No problem: I searched for (and bought)
+      <strong>the most awkward stock photo I could find</strong>. - &bdquo;That Party Gorilla is gonna stay! The management.&rdquo;
+    </div>
+  </div>
+
+  <div id="info">
+    <h2>Graylog2 v0.9.6</h2>
+   
+    <div class="info-text">
+      It has been a long time since the last release of Graylog2 in April this year. There were more than 20.000 downloads of
+      Graylog2 v0.9.5 in this time and more and more companies started using it. With 0.9.6 the way into the future is grounded:
+      You'll be able to store far more messages and still have a responsive and easy to use web interface. Read about notable new
+      features on the right side.
+    </div>
+
+    <div id="download">
+      <a href="http://www.graylog2.org/download">Download</a>
+    </div>
+
+    <div class="info-text">
+      The installation docs have been updated for 0.9.6 and are available in the wiki for
+      <a href="https://github.com/Graylog2/graylog2-server/wiki/Installing" target="_blank">server</a> and
+      <a href="https://github.com/Graylog2/graylog2-web-interface/wiki/Installing-the-web-interface-on-Debian-5.0" target="_blank">web interface</a>.
+    </div>
+
+    <div class="info-text">
+      Because ElasticSearch is replacing MongoDB as message storage <strong>you will have to migrate your existing messages if you want
+      to keep them</strong>. There is a <a href="https://github.com/joschi/graylog2-mongo-es-migrator" target="_blank">migrator script available</a>
+      that should do the job.
+    </div>
+
+    <div id="donate">
+      <%= erb :_pledgie %>
+    </div>
+
+    <div class="ad-separator">Advertisement</div>
+    <div id="adsense">
+      <script type="text/javascript"><!--
+        google_ad_client = "ca-pub-0496187243469337";
+          /* 0.9.6 Release page */
+          google_ad_slot = "4484978262";
+          google_ad_width = 250;
+          google_ad_height = 250;
+          //-->
+          </script>
+          <script type="text/javascript"
+            src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+          </script> 
+    </div>
+  </div>
+
+  <div id="whats-new">
+    
+    <h2 id="whats-new-head">So, what's new?</h2>
+
+    <div class="new-feature">
+      <div class="new-feature-head">
+        <h3>ElasticSearch is the new message storage</h3>
+      </div>
+      
+      <div class="new-feature-text">
+        ElasticSearch is the new message storage. As a full-powered full text search engine and indexer
+        it allows fast queries on huge collections of log messages. This leads to an extreme perfomance
+        boost especially when you want to keep millions of messages. With it's easy to configure
+        clustering, you are ready to scale out when you want to store more and more logs. 
+      </div>
+    </div>
+    
+    <div class="new-feature">
+      <div class="new-feature-head">
+        <h3>Analytics Shell</h3>
+      </div>
+      
+      <div class="new-feature-text">
+        This is the first release that includes the Analytics Shell. It is like a terminal running in your
+        browser that allows you to perform find, count and distribution queries on all or subsets of your
+        messages. You can learn more about the shell in the
+        <a href="https://github.com/Graylog2/graylog2-web-interface/wiki/The-Analytics-shell" target="_blank">wiki</a>
+        or watch a little <a href="#" target="_blank">screencast</a>. 
+      </div>
+    </div>
+    
+    <div class="new-feature">
+      <div class="new-feature-head">
+        <h3>Fast long term graphs</h3>
+      </div>
+      
+      <div class="new-feature-text">
+        The analytics graphs are no longer generated by actually counting the messages in your collection but
+        read from MongoDB where they were stored by the server. This is extremely fast compared to the old
+        behaviour and has two advantages. 1) It's possible to build graphs over long periods of time without
+        waiting for ages. Even the GUI has been changed to easily draw graphs over hours, days or weeks.
+        2) The graphs are independent from the messages index. This means that even if you deleted messages
+        older than 2 months, you can still draw graphs beyond that period. This works for the overall message
+        counts, streams and hosts.
+      </div>
+    </div>
+    
+    <div class="new-feature">
+      <div class="new-feature-head">
+        <h3>Internal message queue system</h3>
+      </div>
+      
+      <div class="new-feature-text">
+        The server now interally writes accepted messages to it's message queue instead of directly indexing
+        them. You can define in which intervals how many messages should be indexed. This is a good mechanism
+        to absorb and resist extreme load spikes. It also allowed to change the indexing of messages to a batch
+        system which leads to less IO load. You can easily monitor the queue in the web interface and tweak it's
+        settings in your graylog2.conf - It is also possible to define a maximum limit.
+      </div>
+    </div>
+    
+    <div class="new-feature" style="border:0;">
+      <div class="new-feature-head">
+        <h3>New filters/stream rules, a lot of improvements and bugfixes</h3>
+      </div>
+      
+      <div class="new-feature-text">
+        There are some new quickfilters and stream rules. For example Severity (or higher), Host (regex),
+        Full Message or Filename/Line. There are also a lot of bugfixes and huge improvements since
+        the latest 0.9.5 patchlevel releases. More than 600 commits made this the best Graylog2 ever!
+      </div>
+    </div>
+  
+    <br style="clear: both;">
+  </div>
+  <br style="clear: both;">
+
+  <div id="footer">
+    A big thank you goes out to the awesome community around Graylog2 that has grown since 2010. It's great to have
+    such a community that helps each other in a nice way and is always happy to test even the newest and unstable
+    preview releases. All this would not have been possible without you! Another big thank you goes out to all the
+    contributors, especially <a href="https://github.com/joschi" target="_blank">Jochen Schalanda</a>
+    (who has great experience with Java and contributed awesome server code),
+    <a href="https://github.com/cipherpunk" target="_blank">Dennis Oelkers</a> and
+    <a href="https://github.com/aleksi" target="_blank">Alexey Palazhchenko</a> (who both already contributed to
+    previous versions a lot).
+    
+    <br /><br />
+    <strong>Everybody a happy new year 2012 and a lot of fun with Graylog2,</strong><br />
+    Lennart Koopmann <i>(Thu Dec 22 21:42:50 +0100 2011)</i>
+  </div>
+
+</div>
+
+<script type="text/javascript">var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-16697378-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+
+  </div>
+
+</div>
+
+<script type="text/javascript">var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-16697378-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+<script type="text/javascript">
+var _sf_async_config={uid:30855,domain:"graylog2.org"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") +
+       "js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
+<br />
+<br />
+<br />
+<br />
+
+</body>
+</html
