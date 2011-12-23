@@ -36,6 +36,10 @@ a:hover {
   margin: 0px auto;
 }
 
+#top {
+  height: 620px;
+}
+
 .teaser-two {
   font-family: 'Armata', sans-serif;
   margin-top: 10px;
