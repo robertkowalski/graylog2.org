@@ -191,3 +191,17 @@ ul {
   border-bottom: 1px dotted #000;
   padding-bottom: 2px;
 }
+
+#new-version {
+  font-weight: bold;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px;
+  background-color: #C03;
+  text-align: center;
+}
+
+#new-version a {
+  color: #fff;
+  text-decoration: underline;
+}
